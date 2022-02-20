@@ -1,5 +1,6 @@
 package edu.temple.imageactivity
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,8 +16,10 @@ class MainActivity : AppCompatActivity() {
         // Find layout (root element)
         val imageView = findViewById<ImageView>(R.id.imageView)
 
-        /*val id = resources.getIdentifier(lowerCountryCode, "drawable", packageName)
-        imageView.setImageResource(id)*/
+        val mDrawableName = "a"
+        val res: Resources = resources
+        val resID: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        imageView.setImageResource(resID)
 
         // Create array of color objects
         val colors = arrayOf(
