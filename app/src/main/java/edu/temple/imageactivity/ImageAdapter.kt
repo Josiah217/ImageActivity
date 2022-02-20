@@ -13,6 +13,7 @@ class ImageAdapter (_imageObjects : Array<ImageObject>) : RecyclerView.Adapter<I
 
     val imageObjects = _imageObjects
 
+
     // Create view holder (defined as 'inner' class to access members of outer class
     inner class ImageViewHolder(_view: View) : RecyclerView.ViewHolder(_view) {
         val imageNameTextView = _view.findViewById<TextView>(R.id.textViewIV)
@@ -33,6 +34,9 @@ class ImageAdapter (_imageObjects : Array<ImageObject>) : RecyclerView.Adapter<I
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         // Manipulate view attributes based on item at 'position'
         holder.imageNameTextView.text = imageObjects[position].name
+        holder.imageNameTextView.textSize = 23F
+        holder.imageDisplayView .setImageResource(imageObjects[position].pathFile)
+
 
     }
 

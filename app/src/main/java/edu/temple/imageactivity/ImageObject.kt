@@ -1,3 +1,7 @@
 package edu.temple.imageactivity
 
-data class ImageObject (val name: String, val pathFile: String)
+import android.content.res.Resources
+
+data class ImageObject (val name: String, val pathFile: Int){
+
+}

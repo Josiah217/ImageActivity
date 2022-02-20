@@ -16,23 +16,41 @@ class MainActivity : AppCompatActivity() {
         // Find layout (root element)
         val imageView = findViewById<ImageView>(R.id.imageView)
 
-        val mDrawableName = "a"
+        var mDrawableName = "a"
         val res: Resources = resources
-        val resID: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
-        imageView.setImageResource(resID)
+        val resID1: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "b"
+        val resID2: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "c"
+        val resID3: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "d"
+        val resID4: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "e"
+        val resID5: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "f"
+        val resID6: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "g"
+        val resID7: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "h"
+        val resID8: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "i"
+        val resID9: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+        mDrawableName = "i1"
+        val resID10: Int = res.getIdentifier(mDrawableName, "drawable", packageName)
+
 
         // Create array of color objects
         val colors = arrayOf(
-            ImageObject("Bulbasaur", "#FF0000"),
-            ImageObject("Charmander", "#00FF00"),
-            ImageObject("Squirtle", "#0000FF"),
-            ImageObject("Chikorita", "#FF0000"),
-            ImageObject("Cyndaquil", "#00FF00"),
-            ImageObject("Totodile", "#0000FF"),
-            ImageObject("Treecko", "#FF0000"),
-            ImageObject("Torchic", "#00FF00"),
-            ImageObject("Mudkip", "#0000FF"),
-            ImageObject("Mew", "#0000FF")
+            ImageObject("Bulbasaur", resID1),
+            ImageObject("Charmander", resID2),
+            ImageObject("Squirtle", resID3),
+            ImageObject("Chikorita", resID4),
+            ImageObject("Cyndaquil", resID5),
+            ImageObject("Totodile", resID6),
+            ImageObject("Treecko", resID7),
+            ImageObject("Torchic", resID8),
+            ImageObject("Mudkip", resID9),
+            ImageObject("Mew", resID10)
 
 
             )
